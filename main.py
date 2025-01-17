@@ -1,10 +1,10 @@
+
+#Librarires
 import socket
 import pythonosc
 import speech_recognition
 import pyaudio
-
 from client import Client
-
 
 #Steps to develop
 #1 - Open a file and add each line of the file to an array
@@ -24,6 +24,8 @@ def main():
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
     client = Client(53000,ip)
+
+    #Step 2.5
 
     #Step 3
 

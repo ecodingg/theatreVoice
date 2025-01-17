@@ -9,4 +9,6 @@ class Client():
         self.ip = ip
 
     #Send Signal
+    def sendSignal(self):
+        print("HELP")
 
