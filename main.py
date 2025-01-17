@@ -1,6 +1,7 @@
 import socket
 import pythonosc
 import speech_recognition
+import pyaudio
 
 from client import Client
 
