@@ -10,5 +10,5 @@ class Client():
 
     #Send Signal
     def sendSignal(self):
-        print("HELP")
+        print("Not done")
 
