@@ -33,11 +33,11 @@ def main():
     with mic as source:
         r.adjust_for_ambient_noise(source)
         audio = r.listen(source)
-    print(r.recognize_amazon(audio))
 
     print("Step 2.5 done")
 
     #Step 3
+
 
 
 main()
