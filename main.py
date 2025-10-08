@@ -3,8 +3,8 @@ import socket
 import pythonosc
 import speech_recognition as sr
 import pyaudio
-from client import Client
-from test.test_asdl_parser import src_base
+from client import Client as cli
+import time
 
 #Steps to develop
 #1 - Open a file and add each line of the file to an array
@@ -21,10 +21,11 @@ def main():
         lines.append(line)
 
     print("Step 1 done")
+
     #Step 2
     hostname = socket.gethostname()
     ip = socket.gethostbyname(hostname)
-    client = Client(53000,ip)
+    client = cli(53000,ip)
 
     print("Step 2 done")
     #Step 2.5
@@ -37,6 +38,17 @@ def main():
     print("Step 2.5 done")
 
     #Step 3
+    while(True):
+        for line in lines:
+            if audio == line:
+                print(audio)
+                #client.sendSignal()
+                print("Sent Signal")
+            else:
+                time.sleep(0.01)
+        break
+
+    print("Step 3 done, finishing proof of concept")
 
 
 
